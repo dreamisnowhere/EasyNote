@@ -1,0 +1,16 @@
+# CACHE MANIFEST
+
+# 캐시해서 오프라인에서 사용할 수 있게 할 파일 선언 (캐시섹션)
+# CACHE:
+# index.html
+# js/jquery/jquery-1.5.2.min.js
+# js/jquery/jquery.mobile-1.0a4.1.min.js
+# css/jquery/jquery.mobile-1.0a4.1.min.css
+# css/jquery/images/ajax-loader.png
+# css/jquery/images/icons-36-white.png
+
+# 오프라인에서는 무조건 사용할 수 없는 파일 선언 (네트워크 섹션)
+# NETWORK:
+
+# 지정된 파일이 존재하지 않을 경우 이를 대체할 파일 선언 (폴백 섹션)
+# FALLBACK:

@@ -1,0 +1,23 @@
+#txtBox {
+	-moz-background-color: rgb(255, 240, 70);
+	-moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+	-webkit-background-color: rgb(255, 240, 70);
+	-webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+	background-color: rgb(255, 240, 70);
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+	width: 97%;
+    padding: 10px;
+}
+
+#info {
+	color: red;
+}
+
+#login_email, #login_password {
+	width: 99%;
+}
+
+#copyright {
+	font-size: 10px;
+	text-align: center;
+}

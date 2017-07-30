@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- <html manifest="EasyNote.manifest"> 애플리케이션 캐시를 위한 매니페스트 파일 선언 -->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Easy Note</title>
+
+		<!-- JQuery와 JQuery Mobile 라이브러리 파일 -->
+		<script src="https://apis.google.com/js/api.js"></script>
+		<link type="text/css" rel="stylesheet" href="./css/jquery/jquery.mobile-1.0a4.1.min.css" />
+		<script type="text/javascript" src="./js/jquery/jquery-1.5.2.min.js"></script>
+		<script type="text/javascript" src="./js/jquery/jquery.mobile-1.0a4.1.min.js"></script>
+
+		<!-- 레이아웃(css)과 동작(javascript)을 분리 -->
+		<link type="text/css" rel="stylesheet" href="./css/style.css" />
+		<script type="text/javascript" src="./js/func.js"></script>
+		<script type="text/javascript" src="./js/googleOAuth.js"></script>
+	</head>
+	<body onload="pageload()">
+		<!-- 메인 페이지 -->
+		<div data-role="page" id="MainPage">
+			<div data-role="header" data-theme="b">
+				<h1>Easy Note</h1>
+			</div>
+			<div data-role="content" data-theme="b">
+				<p>※ 메모를 입력하고 Enter를 누르면 Local Storage에 자동 저장됩니다.</p>
+
+				<pre id="content"></pre>
+
+				<!-- 텍스트를 입력하면 saveTxt 함수를 호출 -->
+				<div data-role="fieldcontain">
+					<textarea id="txtBox" onKeyDown="javascript:saveTxt()" onKeyUp="javascript:saveTxt()" placeholder="메모할 내용을 입력하세요."></textarea>
+				</div>
+
+				<!-- 저장시간 안내문구 -->
+				<p id="info"></p>
+			</div>
+			<div data-role="footer">
+				<div data-role="navbar">
+					<ul>
+						<!-- 비우기 버튼을 클릭하면 clr 함수 호출 -->
+						<li><a href="javascript:clr()" data-icon="gear">비우기</a></li>
+
+						<!-- Google 계정 연동 & 불러오기 -->
+						<li><a id="google-authorize" href="javascript:handleClientLoad()" data-icon="grid">LogIn</a></li>
+
+						<!-- Google 계정에 메모 Data 저장 -->
+						<li><a id="google-save" href="javascript:createFile()" data-icon="check">저장</a></li>
+
+						<!-- Google 계정에서 메모 Data 삭제 -->
+						<li><a id="google-delete" href="javascript:deleteFile()" data-icon="delete">삭제</a></li>
+					</ul>
+				</div>
+				<div data-role="footer" data-theme="c">
+					<p id="copyright">Copyright ⓒ <a href="mailto:console.log.helloworld@gmail.com">console.log</a> All right reserved.</p>
+				</div>
+			</div>
+	</body>
+</html>
